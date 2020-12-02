@@ -3,7 +3,7 @@ QX
 配置说明:  
 微信小程序"太平洋车生活" 手签一次获取cookie
 [rewrite_local]  
-https:\/\/auto\.chediandian\.com\/activity\/tb-sign\/sign-handle url script-request-body cpic.js
+https:\/\/auto\.chediandian\.com\/activity\/tb-sign\/sign-handle url script-request-body https://raw.githubusercontent.com/tutuh/script/master/task/cpic/cpic.js
 
 [task_local]  
 #太平洋车生活  
