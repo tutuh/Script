@@ -1,12 +1,14 @@
+## 纯自用，不要问，因为我也不懂~
+
 # 特别声明: 
 
 本仓库发布的Script项目中涉及的任何解锁和解密分析脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
 
 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
 
-本人(tutuh)对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害.
+tutuh对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害.
 
-间接使用脚本的任何用户，包括但不限于建立VPS或在某些行为违反国家/地区法律或相关法规的情况下进行传播,  本人(tutuh)对于由此引起的任何隐私泄漏或其他后果概不负责.
+间接使用脚本的任何用户，包括但不限于建立VPS或在某些行为违反国家/地区法律或相关法规的情况下进行传播,  tutuh对于由此引起的任何隐私泄漏或其他后果概不负责.
 
 请勿将Script项目的任内容用于商业或非法目的，否则后果自负.
 
@@ -21,10 +23,10 @@
 
 ## 感谢
 
-[@NobyDa](https://github.com/NobyDa)
-[@blackmatrix7](https://github.com/blackmatrix7)
-[@songyangz](https://github.com/songyangz)
-[@Sunert](https://github.com/Sunert)
-[@chavyleung](https://github.com/chavyleung)
-
+[@NobyDa](https://github.com/NobyDa)  
+[@blackmatrix7](https://github.com/blackmatrix7)  
+[@songyangz](https://github.com/songyangz)  
+[@Sunert](https://github.com/Sunert)  
+[@chavyleung](https://github.com/chavyleung)  
+[@lxk0301](https://github.com/lxk0301)   
   
