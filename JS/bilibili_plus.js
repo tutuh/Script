@@ -1,5 +1,5 @@
 /* ---by  blackmatrix7--
-# https://github.com/blackmatrix7/ios_rule_script/tree/master/script/bilibili
+ https://github.com/blackmatrix7/ios_rule_script/tree/master/script/bilibili
 */
 const scriptName = 'BiliBili';
 let magicJS = MagicJS(scriptName, 'INFO');
