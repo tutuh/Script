@@ -2,16 +2,16 @@
 打开悦刻app，点开“21天签到”获取cookie，
 Quanmutult X：
 [rewrite_local]
-https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in url script-request-header https://raw.githubusercontent.com/tutuh/Script/master/Relx/relx.js
+https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in url script-request-header https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js
 [task_local]
 #悦刻
-0 8 * * * https://raw.githubusercontent.com/tutuh/Script/master/Relx/relx.js, tag=Relx悦刻, enabled=true
+0 8 * * * https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js, tag=Relx悦刻, enabled=true
 
 Surge:
-悦刻cookie = script-path=https://raw.githubusercontent.com/tutuh/Script/master/Relx/relx.js,type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in
+悦刻cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js,type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in
 
 
-悦刻 = type=cron,cronexp=0 9 0 * * *,script-path=https://raw.githubusercontent.com/tutuh/Script/master/Relx/relx.js
+悦刻 = type=cron,cronexp=0 9 0 * * *,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js
 
 
 [mitm]: app.relxtech.com
