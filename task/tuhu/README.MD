@@ -9,6 +9,7 @@ https:\/\/cl-gateway\.tuhu\.cn\/cl-common-api\/api\/member\/addTask url script-r
 [task_local]   
 #途虎养车   
 0 8 * * * https://raw.githubusercontent.com/tutuh/script/master/task/tuhu/tuhu.js, tag=途虎养车, enabled=true   
-```
+
 [MITM]    
-hostname= api.tuhu.cn, cl-gateway.tuhu.cn  
+hostname= api.tuhu.cn, cl-gateway.tuhu.cn
+```
