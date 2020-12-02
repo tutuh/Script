@@ -10,7 +10,7 @@ https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add url script-request-body htt
 
 [task_local]
 #联想智选
-0 8 * * * https://raw.githubusercontent.com/tutuh/Script/master/lenovo/lenovo.js, tag=联想智选, enabled=true
+0 8 * * * https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js, tag=联想智选, enabled=true
 [mitm] 
 hostname=api.club.lenovo.cn
 
