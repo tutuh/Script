@@ -6,7 +6,7 @@
 获取Cookie后注释：
 QuantumultX:
 [rewrite_local]
-https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add url script-request-body https://raw.githubusercontent.com/tutuh/master/master/task/lenovo.js
+https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add url script-request-body https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js
 
 [task_local]
 #联想智选
@@ -16,9 +16,9 @@ hostname=api.club.lenovo.cn
 
 Surge：
 [Script]
-联想智选 Cookie = script-path=https://raw.githubusercontent.com/tutuh/Script/master/lenovo/lenovo.js,requires-body=true,type=http-request,pattern=https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add
+联想智选 Cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js,requires-body=true,type=http-request,pattern=https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add
 
-联想智选 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/tutuh/master/master/task/lenovo.js
+联想智选 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js
 [mitm] 
 hostname=api.club.lenovo.cn
 
