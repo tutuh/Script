@@ -81,7 +81,7 @@ $tutuh.get(URL, function(error, response, data) {
 	subt = "签到成功🎉"
 	detail = "已签到" + obj.NeedDays + "天,获得:" + obj.AddIntegral + "积分"
 	}
-	//tutu(tt,subt,detail)
+	tutu(tt,subt,detail)
 	console.log(detail)
 	resolve()
 	})
@@ -89,6 +89,7 @@ $tutuh.get(URL, function(error, response, data) {
 });
 }
 
+/*
 function ID20() {
 	return new Promise(resolve => {
 	const URL = {url: "https://cl-gateway.tuhu.cn/cl-common-api/api/member/addTask",
@@ -129,7 +130,7 @@ function ID20a() {
 });
 }
 
-/*
+
 function ID8() {
 	return new Promise(resolve => {
 	setTimeout(() => {
@@ -173,7 +174,7 @@ function ID8a() {
 }, 1200)
 });
 }
-*/
+
 function ID12() {
 	return new Promise(resolve => {
 	setTimeout(() => {
@@ -395,12 +396,13 @@ function ID25a() {
 });
 }
 
+
 function showmsg() {
 subt = subt;
 desc = detail + "\n" + detail1 + "\n" + detail2 + "\n" + detail5 + "\n" + detail6 + "\n" + detail7 + "\n" + detail8 + "\n" + detail9 + "\n" + detail10 + "\n" + detail11 + "\n" + detail12 + "\n" + detail13 + "\n" + detail14 + "\n";
 $tutuh.notify(tt, subt, desc)
 }
-
+*/
 
 function tutuh() {
 	const isRequest = typeof $request != "undefined"
