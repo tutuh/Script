@@ -1,6 +1,10 @@
 /*
 BY yichahucha
 README：https://github.com/yichahucha/surge/tree/master
+[rewrite_local]
+^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+[mitm]
+hostname = api.m.jd.com
  */
 
 const path1 = "serverConfig";
