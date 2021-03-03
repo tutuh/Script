@@ -1,5 +1,4 @@
 /*
-by yichahucha
 README：https://github.com/yichahucha/surge/tree/master
  */
 
