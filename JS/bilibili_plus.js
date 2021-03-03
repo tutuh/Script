@@ -1,4 +1,5 @@
-#  BY blackmatrix7
+/* BY blackmatrix7
+*/
 const scriptName = 'BiliBili';
 let magicJS = MagicJS(scriptName, 'INFO');
 
