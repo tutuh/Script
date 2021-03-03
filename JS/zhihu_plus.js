@@ -1,3 +1,5 @@
+/* BY blackmatrix7
+*/
 const scriptName = '知乎助手';
 const blocked_users_key = 'zhihu_blocked_users';
 const current_userinfo_key = 'zhihu_current_userinfo';
