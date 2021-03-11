@@ -27,5 +27,7 @@ tutuh保留随时更改或补充此免责声明的权利。一旦使用并复制
 [@songyangz](https://github.com/songyangz)  
 [@Sunert](https://github.com/Sunert)  
 [@chavyleung](https://github.com/chavyleung)  
-[@lxk0301](https://github.com/lxk0301)   
+[@lxk0301](https://github.com/lxk0301)  
+[@dompling](https://github.com/dompling/Script)  
+
   
