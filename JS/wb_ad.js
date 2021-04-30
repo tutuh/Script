@@ -8,6 +8,7 @@ README：https://github.com/yichahucha/surge/tree/master
 hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
  */
 
+
 const path1 = "/groups/timeline";
 const path2 = "/statuses/unread";
 const path3 = "/statuses/extend";
@@ -30,6 +31,7 @@ const path19 = "/statuses/video_mixtimeline";
 const path20 = "/video/tiny_stream_video_list";
 const path21 = "/photo/info";
 const path22 = "/live/media_homelist";
+const path23 = "/remind/unread_count";
 
 const url = $request.url;
 let body = $response.body;
@@ -113,8 +115,11 @@ if (
     if (body.indexOf("ad_params") != -1) {
         body = JSON.stringify({});
     }
+} else if (url.indexOf(path23) != -1) {
+    let obj = JSON.parse(body);
+    obj.video = {};
+    body = JSON.stringify(obj);
 }
-
 $done({ body });
 
 function filter_timeline_statuses(statuses) {
