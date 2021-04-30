@@ -7,6 +7,7 @@ BY Sunert
 兼容Nodejs,把获取的Cookie填入KS_TOKEN，多账号用"&"分开
 */
 
+
 const $ = new Env('快手视频')
 let cookieArr = [];
 let ks_tokens = $.getdata('cookie_ks');
