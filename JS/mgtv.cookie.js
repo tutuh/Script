@@ -1,3 +1,13 @@
+/*
+---BY chavyleung---
+CamScanner unlocks pro, Cloud scanning is not available.
+QuanX 1.0.0:  [rewrite_local]
+^https:\/\/credits.bz.mgtv.com\/user\/creditsTake url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js
+
+Surge4.0: [Script]
+http-request ^https:\/\/credits.bz.mgtv.com\/user\/creditsTake script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js
+QX & Q & Surge Mitm = credits.bz.mgtv.com
+*/
 const cookieName = '芒果TV'
 const signurlKey = 'chavy_signurl_mgtv'
 const signheaderKey = 'chavy_signheader_mgtv'
