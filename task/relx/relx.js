@@ -33,20 +33,21 @@ const ckbd=$tutuh.read(ckbdname);
 //++++++++++++++++++++++++++++++++
 
 //3.需要执行的函数都写这里
-async function main()
-{
+
+(async () => {
+  if ($tutuh.isRequest) {
+  getck()
+    } else {
+  main()
+      } else if () {
 await sign();
 await name();
 await showmsg();
-}
-
-if ($tutuh.isRequest) {
-  getck()
-  $tutuh.done()
-} else {
-  main()
-  $tutuh.done()
-}
+}else{
+$tutuh.notify(tt,subt,desc);
+}().finally(() => {
+  $tutuh.done();
+})
 
 function getck() {
    if ($request.headers) {
@@ -77,7 +78,7 @@ return new Promise((resolve) =>{
       signcoin="cookies失效...请重新获取...⁉️"
       detail1=obj.msg
 }   
-      //console.log(signcoin+"\n"+detail1)
+      console.log(signcoin+"\n"+detail1)
       resolve()
 })
 })
