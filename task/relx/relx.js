@@ -42,10 +42,10 @@ await showmsg();
 
 if ($tutuh.isRequest) {
   getck()
-  $tutuh.end()
+ // $tutuh.end()
 } else {
   main();
-  $tutuh.end()
+ //$tutuh.end()
 }
 
 
@@ -82,6 +82,7 @@ return new Promise((resolve) =>{
 resolve()
 })
 })
+  $tutuh.end()
 }
 
 function name() {
@@ -102,6 +103,7 @@ return new Promise((resolve) =>{
 resolve()
 })      
 })
+  $tutuh.end()
 }
 
 function showmsg() {
