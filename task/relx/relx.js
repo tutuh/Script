@@ -42,10 +42,10 @@ await showmsg();
 
 if ($tutuh.isRequest) {
   getck()
-$tutuh.end()
+$tutuh.done()
 } else {
   main();
-$tutuh.end()
+$tutuh.done()
 }
 
 
@@ -145,5 +145,5 @@ function tutuh() {
         if (isQuanX) return $done({})
         if (isSurge) isRequest ? $done({}) : $done()
     }
-    return { isRequest, isQuanX, isSurge, notify, write, read, post, end }
+    return { isRequest, isQuanX, isSurge, notify, write, read, post, done }
 };
