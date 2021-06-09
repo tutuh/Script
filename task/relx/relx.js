@@ -38,11 +38,9 @@ const ckbd=$tutuh.read(ckbdname);
 if ($tutuh.isRequest) {
   getck()
 } else {
-
 await sign();
 await name();
 await showmsg();
-
 }
 })().finally(() => {
   $tutuh.done();
@@ -103,8 +101,6 @@ resolve()
 })      
 })
 }
-
-
 
 function showmsg() {
     subt=nickname+"."+detail+subtc;
