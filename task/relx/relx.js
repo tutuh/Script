@@ -35,19 +35,19 @@ const ckbd=$tutuh.read(ckbdname);
 //3.需要执行的函数都写这里
 
 (async () => {
-  if ($tutuh.isRequest) {
+if ($tutuh.isRequest) {
   getck()
-    } else if(){
-  
-      
+} else {
+
 await sign();
 await name();
 await showmsg();
-}else{
-$tutuh.notify(tt,subt,desc);
-}().finally(() => {
+
+}
+})().finally(() => {
   $tutuh.done();
 })
+
 
 function getck() {
    if ($request.headers) {
