@@ -35,8 +35,8 @@ const ckbd=$tutuh.read(ckbdname);
 //3.需要执行的函数都写这里
 async function main()
 {
-await name();
 await sign();
+await name();
 await showmsg();
 }
 
@@ -58,27 +58,6 @@ function getck() {
    if (shd==true) 
    $tutuh.notify(tt,"获取Cookie:成功🎉","");}  
    }
-}
-
-
-function name() {
-return new Promise((resolve) =>{
-  const nickUrl =
-  {url:"https://app.relxtech.com/dianziyan-api/api/v1/user-info?access",
-  headers:JSON.parse(ckhd),
-}
-     $tutuh.get(nickUrl, function(error, response, data) {
-     var obj=JSON.parse(data);
-     //console.log(data)
-       if(obj.code==202){
-       subt=""
-       }else{
-       nickname="昵称:"+obj.data.nickName;
-       detail="当前共有"+obj.data.integral+"嗨币";}
-       console.log(nickname+"\n"+detail)
-resolve()
-})      
-})
 }
 
 function sign() {
@@ -103,6 +82,27 @@ return new Promise((resolve) =>{
 })
 })
 }
+
+function name() {
+return new Promise((resolve) =>{
+  const nickUrl =
+  {url:"https://app.relxtech.com/dianziyan-api/api/v1/user-info?access",
+  headers:JSON.parse(ckhd),
+}
+     $tutuh.get(nickUrl, function(error, response, data) {
+     var obj=JSON.parse(data);
+     //console.log(data)
+       if(obj.code==202){
+       subt=""
+       }else{
+       nickname="昵称:"+obj.data.nickName;
+       detail="当前共有"+obj.data.integral+"嗨币";}
+       console.log(nickname+"\n"+detail)
+resolve()
+})      
+})
+}
+
 
 
 function showmsg() {
