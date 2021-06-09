@@ -58,6 +58,7 @@ function getck() {
    var shd= $tutuh.write(JSON.stringify(ck_hd),ckhdname);
    if (shd==true) 
    $tutuh.notify(tt,"获取Cookie:成功🎉","");}  
+     $tutuh.end()
 }}
 
 
