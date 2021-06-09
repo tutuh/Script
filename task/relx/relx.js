@@ -37,9 +37,9 @@ const ckbd=$tutuh.read(ckbdname);
 (async () => {
   if ($tutuh.isRequest) {
   getck()
-    } else {
-  main()
-      } else if () {
+    } else if(){
+  
+      
 await sign();
 await name();
 await showmsg();
