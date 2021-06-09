@@ -33,17 +33,18 @@ const ckbd=$tutuh.read(ckbdname);
 //++++++++++++++++++++++++++++++++
 
 //3.需要执行的函数都写这里
+/*
 async function main()
 {
-await name();
+//await name();
 await sign();
-await showmsg();
+//await showmsg();
 }
-
+*/
 if ($tutuh.isRequest) {
   getck()
 } else {
-  main()
+  sign()
 }
 
 function getck() {
