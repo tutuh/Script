@@ -42,10 +42,8 @@ await showmsg();
 
 if ($tutuh.isRequest) {
   getck()
-//$tutuh.end()
 } else {
   main();
-//$tutuh.end()
 }
 
 
@@ -103,7 +101,7 @@ return new Promise((resolve) =>{
 }   
       console.log(signcoin+"\n"+detail1)
 resolve()
-     // $tutuh.end()
+      $tutuh.end()
 })
 })
 }
@@ -113,8 +111,7 @@ function showmsg() {
     subt=nickname+"."+detail+subtc;
     desc=signcoin+detail1;
     $tutuh.notify(tt,subt,desc)
-  $tutuh.end()
-}
+  }
 
 
 function tutuh() {
