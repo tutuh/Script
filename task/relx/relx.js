@@ -127,18 +127,7 @@ function tutuh() {
         if (isQuanX) return $prefs.valueForKey(key)
         if (isSurge) return $persistentStore.read(key)
     }
-    const get = (options, callback) => {
-        if (isQuanX) {
-            if (typeof options == "string") options = { url: options }
-            options["method"] = "GET"
-            $task.fetch(options).then(response => {
-                response["status"] = response.statusCode
-                callback(null, response, response.body)
-            }, reason => callback(reason.error, null, null))
-        }
-        if (isSurge) $httpClient.get(options, callback)
-    }
-    const post = (options, callback) => {
+     const post = (options, callback) => {
         if (isQuanX) {
             if (typeof options == "string") options = { url: options }
             options["method"] = "POST"
@@ -150,8 +139,8 @@ function tutuh() {
         if (isSurge) $httpClient.post(options, callback)
     }
     const end = () => {
-        if (isQuanX) isRequest ? $done({}) : ""
+        if (isQuanX) return $done({})
         if (isSurge) isRequest ? $done({}) : $done()
     }
-    return { isRequest, isQuanX, isSurge, notify, write, read, get, post, end }
+    return { isRequest, isQuanX, isSurge, notify, write, read, post, end }
 };
