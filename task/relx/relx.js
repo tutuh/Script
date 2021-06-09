@@ -44,11 +44,8 @@ if ($tutuh.isRequest) {
   getck()
 } else {
   main()
-  
-}().finally(() => {
- $tutuh.end();
-})
-
+  //$tutuh.end();
+}
 
 function getck() {
    if ($request.headers) {
@@ -114,6 +111,7 @@ function showmsg() {
     subt=nickname+"."+detail+subtc;
     desc=signcoin+detail1;
     $tutuh.notify(tt,subt,desc)
+  $tutuh.end();
   }
 
 
