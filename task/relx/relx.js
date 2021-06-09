@@ -44,7 +44,6 @@ if ($tutuh.isRequest) {
   getck()
 } else {
   main()
-  //$tutuh.end();
 }
 
 function getck() {
@@ -61,7 +60,7 @@ function getck() {
 
 }
 
-
+/*
 function name() {
 return new Promise((resolve) =>{
   const nickUrl =
@@ -81,6 +80,7 @@ resolve()
 })      
 })
 }
+*/
 
 function sign() {
 return new Promise((resolve) =>{
@@ -92,28 +92,29 @@ return new Promise((resolve) =>{
     var obj=JSON.parse(data);
 //console.log(data)
     if(obj.code==200){
-      signcoin="签到成功🌹"+"21天签到活动:已连续签到"+obj.data.continuation_days+"天,获得:"+obj.data.coins+"嗨币!"+"还剩签到"+obj.data.remaining_days+"天"
+      subt="签到成功🌹"+"21天签到活动:已连续签到"+obj.data.continuation_days+"天,获得:"+obj.data.coins+"嗨币!"+"还剩签到"+obj.data.remaining_days+"天"
       }else if(obj.code==500){
-      detail1=obj.msg+",请勿重复签到"   
+      subt=obj.msg+",请勿重复签到"   
       } else {
-      subtc="cookies失效...请重新获取...⁉️"
-      detail1=obj.msg
+      subt="cookies失效...请重新获取...⁉️"
+      desc=obj.msg
 }   
-      console.log(signcoin+"\n"+detail1)
+      //console.log(signcoin+"\n"+detail1)
+      $tutuh.notify(tt,subt,desc)
 resolve()
-    //  $tutuh.end()
+   $tutuh.end()
 })
 })
 }
 
-
+/*
 function showmsg() {
     subt=nickname+"."+detail+subtc;
     desc=signcoin+detail1;
     $tutuh.notify(tt,subt,desc)
-  $tutuh.end();
+  
   }
-
+*/
 
 function tutuh() {
     const isRequest = typeof $request != "undefined"
