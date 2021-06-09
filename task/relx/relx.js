@@ -42,10 +42,10 @@ await showmsg();
 
 if ($tutuh.isRequest) {
   getck()
-$tutuh.end()
+//$tutuh.end()
 } else {
   main();
-$tutuh.end()
+//$tutuh.end()
 }
 
 
@@ -59,7 +59,9 @@ function getck() {
    if (shd==true) 
    $tutuh.notify(tt,"获取Cookie:成功🎉","");}  
      
-}}
+}
+$tutuh.end()
+}
 
 
 function sign() {
