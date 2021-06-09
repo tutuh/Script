@@ -43,7 +43,8 @@ await showmsg();
 if ($tutuh.isRequest) {
   getck()
 } else {
-  main();
+  main()
+  $tutuh.end()
 }
 
 
@@ -101,7 +102,7 @@ return new Promise((resolve) =>{
 }   
       console.log(signcoin+"\n"+detail1)
 resolve()
-      $tutuh.end()
+    //  $tutuh.end()
 })
 })
 }
