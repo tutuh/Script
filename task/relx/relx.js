@@ -42,10 +42,10 @@ await showmsg();
 
 if ($tutuh.isRequest) {
   getck()
-  $tutuh.end()
+  $tutuh.done()
 } else {
   main()
-  $tutuh.end()
+  $tutuh.done()
 }
 
 function getck() {
@@ -116,6 +116,8 @@ function tutuh() {
     const isRequest = typeof $request != "undefined"
     const isSurge = typeof $httpClient != "undefined"
     const isQuanX = typeof $task != "undefined"
+    const isLoon = typeof $loon != "undefined"
+    const log = (message) => console.log(message)
     const notify = (title, subtitle, message) => {
         if (isQuanX) $notify(title, subtitle, message)
         if (isSurge) $notification.post(title, subtitle, message)
@@ -128,7 +130,20 @@ function tutuh() {
         if (isQuanX) return $prefs.valueForKey(key)
         if (isSurge) return $persistentStore.read(key)
     }
-     const post = (options, callback) => {
+    const get = (options, callback) => {
+        if (isQuanX) {
+            if (typeof options == "string") options = { url: options }
+            options["method"] = "GET"
+            $task.fetch(options).then(response => {
+                response["status"] = response.statusCode
+                callback(null, response, response.body)
+            }, reason => callback(reason.error, null, null))
+        }
+        if (isSurge) $httpClient.get(options, (error, response, body) => {
+              callback(error, adapterStatus(response), body)
+            })
+          }
+    const post = (options, callback) => {
         if (isQuanX) {
             if (typeof options == "string") options = { url: options }
             options["method"] = "POST"
@@ -137,11 +152,15 @@ function tutuh() {
                 callback(null, response, response.body)
             }, reason => callback(reason.error, null, null))
         }
-        if (isSurge) $httpClient.post(options, callback)
+        if (isSurge) {
+              $httpClient.post(options, (error, response, body) => {
+                callback(error, adapterStatus(response), body)
+              })
+            }
+          }
+  const done = (value = {}) => {
+      if (isQuanX) return $done(value)
+      if (isSurge) isRequest ? $done(value) : $done()
     }
-    const end = () => {
-        if (isQuanX) return $done({})
-        if (isSurge) isRequest ? $done({}) : $done()
-    }
-    return { isRequest, isQuanX, isSurge, notify, write, read, post, end }
+    return { isRequest, isQuanX, isSurge, notify, write, read, get, log, post, done }
 };
